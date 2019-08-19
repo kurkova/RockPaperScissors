@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class RpsGame {
     private User user;
@@ -16,7 +15,6 @@ public class RpsGame {
     }
 
     public void startGame() {
-
         Move userMove = user.getMove();
         Move computerMove = computer.getMove();
         System.out.println("\nYou played " + userMove + ".");
@@ -38,20 +36,24 @@ public class RpsGame {
         }
         numberOfGames++;
 
-
-//        if(user.playAgain()){
-//            System.out.println();
-//            startGame();
-////        } else {
-////            printGameStats();
-//        }
+        if (user.playAgain()) {
+            System.out.println();
+            startGame();
+        } else {
+            printGameStats();
+        }
     }
 
-//    private void printGameStats(){
-//        int wins = userScore;
-//        int losses = computerScore;
-//        int ties = numberOfGames - userScore - computerScore;
-//        double percentageWon = (wins+((double)ties)/2)/numberOfGames;
-//    }
-
+    private void printGameStats(){
+        System.out.println("You played " + numberOfGames + " times");
+        System.out.println("Scores for computer  " + computerScore + " ,"+ "Yours score: " + userScore);
+        if (computerScore > userScore){
+            System.out.println("Computer won!");
+        } else{
+            System.out.println("You are winner!");
+        }
+    }
 }
+
+
+
