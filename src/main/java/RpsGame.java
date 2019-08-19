@@ -42,16 +42,6 @@ public class RpsGame {
         if(user.playAgain()){
             System.out.println();
             startGame();
-//        } else {
-//            printGameStats();
         }
     }
-
-//    private void printGameStats(){
-//        int wins = userScore;
-//        int losses = computerScore;
-//        int ties = numberOfGames - userScore - computerScore;
-//        double percentageWon = (wins+((double)ties)/2)/numberOfGames;
-//    }
-
 }
