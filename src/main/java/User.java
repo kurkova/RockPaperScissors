@@ -27,10 +27,10 @@ public class User {
         return getMove();
     }
 
-    public boolean playAgain(){
+    public boolean playAgain() {
         System.out.println("Do you want to play again?");
         String userInput = inputScanner.nextLine();
         userInput = userInput.toUpperCase();
-        return userInput.charAt(0)=='Y';
+        return userInput.charAt(0) == 'Y';
     }
 }
