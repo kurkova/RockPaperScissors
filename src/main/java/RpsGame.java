@@ -16,10 +16,6 @@ public class RpsGame {
     }
 
     public void startGame() {
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Enter name");
-        String userName = myObj.nextLine();
-        System.out.println("Hello " + userName + ",time to play Rock&&Paper&&Scissors game!");
 
         Move userMove = user.getMove();
         Move computerMove = computer.getMove();
@@ -42,12 +38,13 @@ public class RpsGame {
         }
         numberOfGames++;
 
-        if(user.playAgain()){
-            System.out.println();
-            startGame();
-//        } else {
-//            printGameStats();
-        }
+
+//        if(user.playAgain()){
+//            System.out.println();
+//            startGame();
+////        } else {
+////            printGameStats();
+//        }
     }
 
 //    private void printGameStats(){
