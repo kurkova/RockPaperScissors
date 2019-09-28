@@ -14,11 +14,13 @@ public class RpsGame {
         numberOfGames = 0;
     }
 
+
     public void startGame() {
         Move userMove = user.getMove();
         Move computerMove = computer.getMove();
         System.out.println("\nYou played " + userMove + ".");
         System.out.println("Computer played " + computerMove + ".\n");
+
 
         int compareMoves = userMove.compareMoves(computerMove);
         switch (compareMoves) {
